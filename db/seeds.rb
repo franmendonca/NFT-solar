@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Nft.destroy_all
+Nft.create(name: "Spaceship", description: "Lorem iupsum", price: 5, wallet_address: "ujsdfksdi")
+
+puts "Created #{Nft.count} nfts"
