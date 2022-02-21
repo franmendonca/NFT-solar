@@ -1,0 +1,54 @@
+// Defining a variable
+$gray: #F4F4F4;
+
+.cards {
+//background: $gray; // Using this variable
+  background-image: url("https://www.azutura.com/media/catalog/product/cache/51/image/650x/040ec09b1e35df139433887a97daa66f/W/S/WS-45699_WP.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  p {
+  font-size: 22px;
+  color: #c0c0c0;
+  }
+}
+.hGQiKy {
+  font-family: graphikCompactMedium;
+  font-size: 9px;
+  letter-spacing: 1.62px;
+  text-transform: uppercase;
+  line-height: 9px;
+  margin: 6px 0px 14.5px;
+  padding: 4px 13px;
+  border-radius: 9px;
+  height: 19px;
+  z-index: 4;
+  border: 1px solid rgb(170, 148, 255);
+  color: rgb(170, 148, 255);
+  background: var(--black-3);
+  font-weight: initial;
+  transform: scale(1);
+}
+.venue-card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 225px;
+  height: 305px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: $gray;
+  box-shadow: 3px 3px 10px #c8c8c8;
+  transition: box-shadow 0.3s ease;
+}
+.card-price {
+  color: purple;
+}
