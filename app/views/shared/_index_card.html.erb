@@ -3,6 +3,7 @@
     <div class="index-card col-3">
         <div class="overviewInfo">
           <div class="productinfo">
+          <div>
             <div class="grouptext">
               <h3>NAME</h3>
               <p><%= nft.name %></p>
@@ -14,6 +15,10 @@
             <div class="grouptext">
               <h3>Wallet Address</h3>
               <p><%= nft.wallet_address %></p>
+            </div>
+          </div>
+            <div class="buttonShow">
+             <%= link_to 'Show', nft_path(nft), class:"btn btn-primary" %>
             </div>
         </div>
       </div>
