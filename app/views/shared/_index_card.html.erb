@@ -1,48 +1,39 @@
-<% @nfts.each do |nft|%>
-  <%= nft.name %>
-<% end %>
-<br>
-<div class="cards">
-<div class="row">
-<div class="col-xs-12 col-sm-6 col-md-3">
-<a href="/venues/14">
-<div class="venue-card">
-<img width="200" height="150" class="card-img" src="https://play.staratlas.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fnft-assets%2Fitems%2FPC9_thumb.jpg&w=3840&q=75">
-<p class="poster__PosterSmallAvailableText-ezHROi gEEfvj">RARITY</p>
-<span class="poster__RewardLevelSmall-jsFrHU hGQiKy">epic</span>
-<br>
-<div class="card-price">5000 €</div>
-</div>
-</a> </div>
-<div class="col-xs-12 col-sm-6 col-md-3">
-<a href="/venues/17">
-<div class="venue-card">
-<img width="200" height="150" class="card-img" src="https://play.staratlas.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fnft-assets%2Fitems%2FOGKAJA_thumb.jpg&w=3840&q=75">
-<p class="poster__PosterSmallAvailableText-ezHROi gEEfvj">RARITY</p>
-<span class="poster__RewardLevelSmall-jsFrHU hGQiKy">epic</span>
-<br>
-<div class="card-price">1500 €</div>
-</div>
-</a> </div>
-<div class="col-xs-12 col-sm-6 col-md-3">
-<a href="/venues/19">
-<div class="venue-card">
-<img width="200" height="150" class="card-img" src="https://play.staratlas.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fnft-assets%2Fitems%2FOGKATP_thumb.jpg&w=3840&q=75">
-<p class="poster__PosterSmallAvailableText-ezHROi gEEfvj">RARITY</p>
-<span class="poster__RewardLevelSmall-jsFrHU hGQiKy">epic</span>
-<br>
-<div class="card-price">800 €</div>
-</div>
-</a> </div>
-<div class="col-xs-12 col-sm-6 col-md-3">
-<a href="/venues/17">
-<div class="venue-card">
-<img width="200" height="150" class="card-img" src="https://play.staratlas.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fnft-assets%2Fitems%2FOGKAJA_thumb.jpg&w=3840&q=75">
-<p class="poster__PosterSmallAvailableText-ezHROi gEEfvj">RARITY</p>
-<span class="poster__RewardLevelSmall-jsFrHU hGQiKy">epic</span>
-<br>
-<div class="card-price">500 €</div>
-</div>
-</a> </div>
-</div>
+<div class="row justify-content-center">
+  <% @nfts.each do |nft| %>
+    <div class="index-card col-3">
+        <div class="overviewInfo">
+          <div class="productinfo">
+            <div class="grouptext">
+              <h3>NAME</h3>
+              <p><%= nft.name %></p>
+            </div>
+            <div class="grouptext">
+              <h3>Price</h3>
+              <p><%= nft.price %> $</p>
+            </div>
+            <div class="grouptext">
+              <h3>Wallet Address</h3>
+              <p><%= nft.wallet_address %></p>
+            </div>
+        </div>
+      </div>
+        <!-- overview info -->
+      <div class="productSpecifications">
+          <h1> <%= nft.name %> </h1>
+          <p> <%= nft.description %> </p>
+          <div class="checkoutButton">
+            <div class="priceTag">
+              <span>$</span><%= nft.price %>
+            </div>
+            <button class="btn btn-primary">
+              <p>Rent</p>
+              <div class="buttonaction">
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- product specificaiton -->
+      </div>
+      <!-- wrapper-->
+  <% end %>
 </div>

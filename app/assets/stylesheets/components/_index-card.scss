@@ -1,54 +1,85 @@
-// Defining a variable
-$gray: #F4F4F4;
+.index-card{
+  --bg-shape-color:linear-gradient(120deg,  #343A4F, #0F1620) ;
+  --lightblue: #3D9DEA;
+  --darkblue: #4A4EEE;
+  --text-color: #D5E1EF;
+  background-color: white;
+  margin: 20px;
 
-.cards {
-//background: $gray; // Using this variable
-  background-image: url("https://www.azutura.com/media/catalog/product/cache/51/image/650x/040ec09b1e35df139433887a97daa66f/W/S/WS-45699_WP.jpg");
-  background-color: #cccccc;
-  background-size: cover;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  text-align: center;
-  h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  .overviewInfo, .productSpecifications {
+    padding: 24px;
   }
-  p {
-  font-size: 22px;
-  color: #c0c0c0;
+  .overviewInfo{
+    background-image:  linear-gradient(176deg, var(--lightblue), var(--darkblue));
+    background-size: cover;
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/032/506/745/large/mattis-heisler-spaceship-concept-update-11.jpg?1626364727");
+    margin-top: 10px;
   }
-}
-.hGQiKy {
-  font-family: graphikCompactMedium;
-  font-size: 9px;
-  letter-spacing: 1.62px;
-  text-transform: uppercase;
-  line-height: 9px;
-  margin: 6px 0px 14.5px;
-  padding: 4px 13px;
-  border-radius: 9px;
-  height: 19px;
-  z-index: 4;
-  border: 1px solid rgb(170, 148, 255);
-  color: rgb(170, 148, 255);
-  background: var(--black-3);
-  font-weight: initial;
-  transform: scale(1);
-}
-.venue-card {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 225px;
-  height: 305px;
-  margin: 20px auto;
-  border-radius: 5px;
-  background: $gray;
-  box-shadow: 3px 3px 10px #c8c8c8;
-  transition: box-shadow 0.3s ease;
-}
-.card-price {
-  color: purple;
+  .productinfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      min-height: 200px;
+      margin-bottom: 50px;
+  }
+  .grouptext{
+  h3 {
+      letter-spacing: 3.2px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #D5E1EF;
+  }
+    p {
+      font-size: 12px;
+      opacity: 0.8;
+      color: #D5E1EF;
+    }
+  }
+  .productSpecifications{
+
+    h1{
+      margin-top: 10px;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+    p {
+      opacity: 0.8;
+      font-size: 15px;
+      line-height: 1.5;
+  }
+
+    .productFeatures {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 20px;
+      grid-row-gap: 16px;
+      .feature{ display:flex;}
+    }
+  }
+  .checkoutButton {
+      display: flex;
+      width: 100%;
+      background-image: var(--bg-shape-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
+      margin-top: 30px;
+      padding: 14px;
+
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .priceTag {
+      display: flex;
+      align-items: center;
+      font-size: 32px;
+  }
+
+  .priceTag span {
+      color: #488dc7;
+      font-size: 20px;
+  }
 }
