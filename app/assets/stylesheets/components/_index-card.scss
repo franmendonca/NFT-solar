@@ -1,20 +1,27 @@
-.index-card{
+.index-card {
   --bg-shape-color:linear-gradient(120deg,  #343A4F, #0F1620) ;
   --lightblue: #3D9DEA;
   --darkblue: #4A4EEE;
   --text-color: #D5E1EF;
   background-color: white;
-  margin: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  // margin-bottom: $grid-gutter-width;
 
   .overviewInfo, .productSpecifications {
     padding: 24px;
   }
+
   .overviewInfo{
     background-image:  linear-gradient(176deg, var(--lightblue), var(--darkblue));
     background-size: cover;
     background-image: url("https://cdnb.artstation.com/p/assets/images/images/032/506/745/large/mattis-heisler-spaceship-concept-update-11.jpg?1626364727");
     margin-top: 10px;
     flex-grow: 1;
+    border-radius: 10px;
   }
   .productinfo {
       display: flex;
@@ -23,20 +30,26 @@
       min-height: 200px;
   }
   .grouptext{
-  h3 {
-      letter-spacing: 3.2px;
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 8px;
-      color: #D5E1EF;
-  }
+    h3 {
+        letter-spacing: 3.2px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #D5E1EF;
+    }
+
     p {
       font-size: 12px;
       opacity: 0.8;
       color: #D5E1EF;
     }
   }
+
   .productSpecifications{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     h1{
       margin-top: 10px;

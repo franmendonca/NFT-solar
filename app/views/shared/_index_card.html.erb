@@ -1,6 +1,7 @@
-<div class="row justify-content-center">
+<div class="row">
   <% @nfts.each do |nft| %>
-    <div class="index-card col-3">
+    <div class="col-4 mb-3">
+      <div class="index-card">
         <div class="overviewInfo">
           <div class="productinfo">
           <div>
@@ -21,24 +22,23 @@
              <%= link_to 'Show', nft_path(nft), class:"btn btn-primary" %>
             </div>
         </div>
-      </div>
-        <!-- overview info -->
-      <div class="productSpecifications">
+
+          <!-- overview info -->
+        <div class="productSpecifications">
           <h1> <%= nft.name %> </h1>
-          <p> <%= nft.description %> </p>
           <div class="checkoutButton">
             <div class="priceTag">
               <span>$</span><%= nft.price %>
             </div>
             <button class="btn btn-primary">
-              <p>Rent</p>
-              <div class="buttonaction">
-              </div>
+              Rent
             </button>
           </div>
         </div>
         <!-- product specificaiton -->
       </div>
       <!-- wrapper-->
+    </div>
+
   <% end %>
 </div>
