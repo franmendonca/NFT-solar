@@ -1,15 +1,21 @@
 <div class="container">
   <div class="card-product" >
     <img src="https://play.staratlas.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fnft-assets%2Fitems%2FFBLETR.jpg&w=2048&q=75" />
+      <br>
     <div class="card-product-infos">
       <div>
+      <div>
+        <%= link_to  nfts_path do  %>
+        <i class="fas fa-times btn-close"></i>
+        <% end %>
+      </div>
         <h2><%= @nft.name %></h2>
         <p><strong>About:</strong> <%= @nft.description %></p>
         <p><strong>Wallet address: </strong><%= @nft.wallet_address %></p>
       </div>
       <div class="price">
         <p><strong>Price: </strong><%= @nft.price %></p>
-        <button type="button" class="btn btn-dark">Rent it!</button>
+        <button type="button" class="btn btn-primary">Rent it!</button>
       </div>
     </div>
   </div>

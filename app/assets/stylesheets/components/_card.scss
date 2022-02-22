@@ -8,6 +8,7 @@
   align-items: start;
   margin: 40px;
   border-radius: 5px;
+  position: relative;
 }
 
 .card-product img {
@@ -17,7 +18,7 @@
 }
 
 .card-product h2 {
-  font-size: 45px;
+  font-size: 25px;
   color: gray;
   font-weight: bold;
   color: rgb(167, 164, 164);
@@ -27,7 +28,7 @@
 }
 
 .card-product p {
-  font-size: 25px;
+  font-size: 12px;
   line-height: 1.4;
   align-items: center;
   color: lightgray;
@@ -51,4 +52,20 @@
   position: relative;
   align-items: end;
   text-align: right;
+  font-size: 12px;
+}
+
+.btn-close {
+  // display: flex;
+  // text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: white;
+
+}
+
+.fa-times:before {
+  color: white;
 }
