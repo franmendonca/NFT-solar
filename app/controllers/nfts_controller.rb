@@ -4,7 +4,7 @@ class NftsController < ApplicationController
     @nfts = Nft.all
   end
 
-  # def show; end
+  def show; end
 
   # def create
   #   @nft = Nft.new(nft_params)
@@ -18,9 +18,9 @@ class NftsController < ApplicationController
 
   private
 
-  # def set_nft
-  #   @nft = Nft.find(params[:id])
-  # end
+   def set_nft
+     @nft = Nft.find(params[:id])
+   end
 
   def nft_params
     params.require(:nft).permit(:name, :price, :wallet_address, :description, :photo)
