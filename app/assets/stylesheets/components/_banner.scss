@@ -1,7 +1,12 @@
 .banner {
   background-size: cover;
   background-position: center;
+  height: 100vh;
   padding: 150px 0;
+  border-radius: 15px;
+  margin: 5px 30px 30px 30px;
+  display: flex;
+  align-items: center;
 }
 
 .banner h1 {
@@ -10,6 +15,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  text-align: justify;
 }
 
 .banner p {
