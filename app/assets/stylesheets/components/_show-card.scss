@@ -1,6 +1,6 @@
-.card-product {
+.show-card {
   overflow: hidden;
-  height: 480px;
+  max-width: 90%;
   background: rgb(50,56,77);
   background: linear-gradient(90deg, rgba(50,56,77,1) 35%, rgba(17,23,34,1) 100%);
   box-shadow: 0 0 15px rgba(238, 237, 237, 0.2);
@@ -9,15 +9,16 @@
   margin: 40px;
   border-radius: 5px;
   position: relative;
+  padding-left: 0px;
 }
 
-.card-product img {
-  height: 100%;
-  width: 620px;
-  object-fit: cover;
-}
+// .show-card img {
+//   height: 100%;
+//   width: 40%;
+//   object-fit: cover;
+// }
 
-.card-product h2 {
+.show-card h2 {
   font-size: 25px;
   color: gray;
   font-weight: bold;
@@ -27,7 +28,7 @@
   border-radius: 5px;
 }
 
-.card-product p {
+.show-card p {
   font-size: 12px;
   line-height: 1.4;
   align-items: center;
@@ -37,8 +38,8 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
+.show-card .show-card-infos {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,4 +69,11 @@
 
 .fa-times:before {
   color: white;
+}
+
+.background-show{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
