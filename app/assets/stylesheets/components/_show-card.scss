@@ -1,6 +1,5 @@
 .show-card {
   overflow: hidden;
-  height: 480px;
   max-width: 90%;
   background: rgb(50,56,77);
   background: linear-gradient(90deg, rgba(50,56,77,1) 35%, rgba(17,23,34,1) 100%);
@@ -13,11 +12,11 @@
   padding-left: 0px;
 }
 
-.show-card img {
-  height: 100%;
-  width: 40%;
-  object-fit: cover;
-}
+// .show-card img {
+//   height: 100%;
+//   width: 40%;
+//   object-fit: cover;
+// }
 
 .show-card h2 {
   font-size: 25px;
@@ -40,7 +39,7 @@
 }
 
 .show-card .show-card-infos {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,4 +69,11 @@
 
 .fa-times:before {
   color: white;
+}
+
+.background-show{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
