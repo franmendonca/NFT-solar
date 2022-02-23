@@ -4,7 +4,9 @@ class NftsController < ApplicationController
     @nfts = Nft.all
   end
 
-  def show; end
+  def show
+    @rental = Rental.new
+  end
 
   def new
     @nft = Nft.new

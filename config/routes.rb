@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :nfts, only: [:index, :show, :new, :create] do
     resources :rentals, only: [:new, :create]
   end
-  resources :rentals, only: :destroy
+  resources :rentals, only: [:index, :destroy]
+  # get "rentals", to: "pages#rentals"
 end
