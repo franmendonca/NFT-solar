@@ -2,7 +2,7 @@
   <% @nfts.each do |nft| %>
     <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
       <div class="index-card">
-        <div class="overviewInfo">
+        <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">>
           <div class="productinfo">
             <div>
               <div class="grouptext">
