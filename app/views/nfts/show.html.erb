@@ -1,6 +1,6 @@
-<div class="show-content">                                  
+<div class="show-content">
   <div class="background-show" data-controller="toggle-rental-form">
-    <%= render "nfts/card" %>
+    <%= render "shared/show-card" %>
 
     <div class="container d-none" data-toggle-rental-form-target="formContainer">
       <%= simple_form_for([@nft, @rental]) do |f| %>
