@@ -1,3 +1,13 @@
 .background {
-  background-image: url("https://wallpapercave.com/dwp2x/wp10071559.jpg");
+  background: rgb(90,61,44);
+  background: linear-gradient(0deg, rgba(90,61,44,1) 0%, rgba(73,76,65,1) 45%, rgba(16,50,59,1) 100%);
+  //background-image: url("https://wallpapercave.com/dwp2x/wp10071559.jpg");
+  padding: 0 10px;
+}
+
+.background-home {
+  background: rgb(90,61,44);
+  background: linear-gradient(0deg, rgba(90,61,44,0.2) 0%, rgba(73,76,65,0.2) 45%, rgba(16,50,59,0.2) 100%);
+  //background-image: url("https://wallpapercave.com/dwp2x/wp10071559.jpg");
+  padding-bottom: 20px;
 }
