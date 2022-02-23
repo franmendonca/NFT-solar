@@ -1,3 +1,17 @@
 .main-content{
   min-height: calc(100vh - 170px);
+  margin-top: 67px;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
+h1, h2, h3, h5{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-weight: 600;
 }
