@@ -84,3 +84,7 @@ production:
   database: NFT_solar_production
   username: NFT_solar
   password: <%= ENV['NFT_SOLAR_DATABASE_PASSWORD'] %>
+
+cloudinary:
+  service: Cloudinary
+  folder: <%= Rails.env %>
