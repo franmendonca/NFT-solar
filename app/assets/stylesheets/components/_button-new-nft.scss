@@ -3,3 +3,14 @@
   margin-top: 48px;
   margin-bottom: 25px;
 }
+
+.btn-main{
+  background-color: #15343B !important;
+  border: 0 !important;
+  color: whitesmoke !important;
+
+  &:hover {
+  background-color: #285964 !important;
+  color: white !important;
+  }
+}

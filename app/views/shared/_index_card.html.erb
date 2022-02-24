@@ -4,7 +4,7 @@
       <div class="overviewInfo card-img-top">
         <div class="productinfo">
           <div class="button-new-nft">
-            <%=link_to 'Create your NFT to rent' , new_nft_path, class: "btn btn-primary" %>
+            <%=link_to 'Create your NFT to rent' , new_nft_path, class: "btn btn-main" %>
           </div>
         </div>
       </div>
@@ -20,10 +20,10 @@
         </p>
         <div class="checkoutButton">
           <div class="priceTag">
-            <span class="placeholder col-7"></span>
+            <span class="placeholder"></span>
           </div>
           <div class="buttonShow">
-            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-12"></a>
+            <a href="#" tabindex="-1" class="btn btn-light disabled placeholder col-12"></a>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
               <span>$&ensp;</span><%=nft.price %>
             </div>
             <div class="buttonShow">
-              <%= link_to 'Show', nft_path(nft), class:"btn btn-primary" %>
+              <%= link_to 'Show', nft_path(nft), class:"btn btn-light" %>
             </div>
           </div>
         </div>
