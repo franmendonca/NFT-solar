@@ -30,6 +30,8 @@
     </div>
   </div>
   <% @nfts.each do |nft| %>
+    <%# TODO: please move this code to nfts/simple_card partial and reuse it everywhere %>
+    <%#= render 'nfts/simple_card', nft: nft %>
     <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
       <div class="index-card">
         <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">
