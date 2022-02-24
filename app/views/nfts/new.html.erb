@@ -1,27 +1,5 @@
-
 <br>
   <div class="container-form">
     <h1>Create your NFT</h1>
-    <%= simple_form_for(@nft) do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <div class="form-inputs">
-        <%= f.input :name %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :description %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :price %>
-      </div>
-          <div class="form-inputs">
-        <%= f.input :wallet_address %>
-      </div>
-      <div class="form-inputs">
-        <%= f.input :photo, as: :file %>
-      </div>
-      <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
-
-    <%= link_to 'Go Back to our NFT lists to browse', nfts_path, class: "btn btn-secondary mt-3"%>
+    <%= render "shared/nft_form" %>
   </div>
