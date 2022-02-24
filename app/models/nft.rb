@@ -6,4 +6,11 @@ class Nft < ApplicationRecord
   validates :price, presence: true, :numericality => { :greater_than_or_equal_to => 1 }
   validates :wallet_address, presence: true
   validates :photo, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_description,
+    against: [ :name, :description ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
