@@ -22,12 +22,14 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+
   .productinfo {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       min-height: 200px;
   }
+
   .productSpecifications{
     h3 {
         letter-spacing: 3.2px;
@@ -53,13 +55,14 @@
       opacity: 0.8;
       font-size: 10px;
       line-height: 1.5;
-  }
+    }
 
     .productFeatures {
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin-top: 20px;
       grid-row-gap: 16px;
+
       .feature{ display:flex;}
     }
   }

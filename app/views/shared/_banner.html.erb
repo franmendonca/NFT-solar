@@ -1,9 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1591302418462-eb55463b49d6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=abed-ismail-_jhUrn9o8yM-unsplash.jpg);">
   <div class="container">
     <h1>NFT Solar</h1>
-    <p>
-      <span data-controller="typed-js"></span>
-    </p>
+    <p><span data-controller="typed-js"></span></p>
     <% unless user_signed_in? %>
       <%= link_to "Sign up now",  new_user_registration_path, class: "btn btn-light" %>
     <% else %>
