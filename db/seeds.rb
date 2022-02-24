@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Rental.destroy_all
-User.destroy_all
 Nft.destroy_all
+User.destroy_all
+Rental.destroy_all
 
 user_1 = User.create(username: "Pedro", email: "pedro@lewagon.com", password: "12345678")
 user_2 = User.create(username: "John", email: "John@lewagon.com", password: "12345678")
