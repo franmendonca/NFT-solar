@@ -1,6 +1,10 @@
 <div class="background">
   <br>
-  <%= render "shared/search" %>
-  <%= render "shared/index_card" %>
+  <div class="row">
+    <%= render "nfts/placeholder_card" %>
+    <% @nfts.each do |nft| %>
+    <%= render "nfts/simple_card", nft: nft %>
+    <% end %>
+  </div>
   <br>
 </div>
