@@ -1,7 +1,6 @@
 <div class="show-content">
   <div class="row background-show" data-controller="toggle-rental-form">
     <%= render "shared/show-card", class: "col-sm-12" %>
-
     <div class="container d-none create-form" data-toggle-rental-form-target="formContainer">
       <%= simple_form_for([@nft, @rental]) do |f| %>
         <%#= f.error_notification %>
