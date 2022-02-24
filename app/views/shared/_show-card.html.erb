@@ -15,8 +15,8 @@
           <p><strong>About:</strong> <%= @nft.description %></p>
           <p><strong>Wallet address: </strong><%= @nft.wallet_address %></p>
         </div>
-        <div class="price">
-          <p><strong>Price: </strong><%= @nft.price %></p>
+        <div class="d-flex justify-content-between align-items-center price">
+          <h5 ><strong>Price: </strong><%= @nft.price %> $</h5>
           <button type="button" class="btn btn-primary" data-action="click->toggle-rental-form#toggle">Rent it!</button>
         </div>
     </div>

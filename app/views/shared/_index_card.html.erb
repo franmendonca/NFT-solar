@@ -4,42 +4,22 @@
       <div class="index-card">
         <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">
           <div class="productinfo">
-            <div>
-              <div class="grouptext">
-                <h3>NAME</h3>
-                <p><%= nft.name %></p>
-              </div>
-              <div class="grouptext">
-                <h3>Price</h3>
-                <p><%= nft.price %> $</p>
-              </div>
-              <div class="grouptext">
-                <h3>Wallet Address</h3>
-                <p><%= nft.wallet_address %></p>
-              </div>
+          </div>
+        </div>
+        <div class="productSpecifications">
+          <h2> <%= nft.name %> </h2>
+          <h3>Wallet Address</h3>
+          <p class= "text-wrap"><%= nft.wallet_address %></p>
+          <div class="checkoutButton">
+            <div class="priceTag">
+              <span>$&ensp;</span><%=nft.price %>
             </div>
             <div class="buttonShow">
               <%= link_to 'Show', nft_path(nft), class:"btn btn-primary" %>
             </div>
           </div>
         </div>
-
-          <!-- overview info -->
-        <div class="productSpecifications">
-          <h2> <%= nft.name %> </h2>
-          <div class="checkoutButton">
-            <div class="priceTag">
-              <span>$&ensp;</span><%=nft.price %>
-            </div>
-            <button class="btn btn-light">
-              Rent
-            </button>
-          </div>
-        </div>
-        <!-- product specificaiton -->
       </div>
-      <!-- wrapper-->
     </div>
-
   <% end %>
 </div>
