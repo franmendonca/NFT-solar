@@ -1,5 +1,5 @@
 <br>
-<div class="container">
+<div class="container-form">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -23,6 +23,8 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%= f.input :user_picture, as: :file,
+          hint: "Upload here your avatar" %>
   </div>
 
   <div class="form-actions">
