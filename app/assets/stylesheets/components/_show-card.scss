@@ -1,8 +1,7 @@
 .show-card {
   overflow: hidden;
   max-width: 90%;
-  background: rgb(50,56,77);
-  background: linear-gradient(90deg, rgba(50,56,77,1) 35%, rgba(17,23,34,1) 100%);
+  background:  rgba(16,50,59,1);
   box-shadow: 0 0 10px rgba(238, 237, 237, 0.2);
   display: flex;
   align-items: start;
@@ -65,19 +64,12 @@
   font-size: 12px;
 }
 
-.btn-close {
-  // display: flex;
-  // text-align: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  color: white;
-
-}
-
 .fa-times:before {
   color: white;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
 }
 
 .background-show{
