@@ -19,10 +19,8 @@
       <div class="form-inputs">
         <%= f.input :photo, as: :file %>
       </div>
-      <div class="form-actions btn-main btn mb-3">
-        <%= f.button :submit %>
-      </div>
-
+      <%= f.button :submit, class: 'btn btn-primary' %>
     <% end %>
-    <%= link_to 'Go Back to our NFT lists to browse', nfts_path, class: "btn btn-secondary"%>
+
+    <%= link_to 'Go Back to our NFT lists to browse', nfts_path, class: "btn btn-secondary mt-3"%>
   </div>
