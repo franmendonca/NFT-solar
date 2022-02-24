@@ -1,6 +1,7 @@
 class RentalsController < ApplicationController
   def index
     @rentals = Rental.where(user: current_user)
+    @nfts = Nft.where(user: current_user.id)
   end
 
   def new

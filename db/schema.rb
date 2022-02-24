@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_23_113002) do
+ActiveRecord::Schema.define(version: 2022_02_24_114626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,9 +49,10 @@ ActiveRecord::Schema.define(version: 2022_02_23_113002) do
     t.string "description"
     t.string "photo"
     t.integer "price"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_nfts_on_user_id"
   end
 
   create_table "rentals", force: :cascade do |t|
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 2022_02_23_113002) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "nfts", "users"
   add_foreign_key "rentals", "nfts"
   add_foreign_key "rentals", "users"
 end
