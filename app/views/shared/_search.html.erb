@@ -1,12 +1,12 @@
 <%= simple_form_for :query, url: nfts_path, method: :get do |f| %>
   <div class="search-form-control form-group">
-          <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a NFT"
-      %>
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a NFT"
+    %>
+  <button name="button" type="submit" class="btn btn-flat">
+    <i class="fas fa-search"></i> Search
+  </button>
   </div>
 <% end %>
