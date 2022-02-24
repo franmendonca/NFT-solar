@@ -1,5 +1,5 @@
 <br>
-<div class="container">
+<div class="container-form">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -23,16 +23,18 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%= f.input :user_picture, as: :file,
+          hint: "Upload here your avatar" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update", class: "btn btn-primary" %>
+    <%= f.button :submit, "Update", class: "btn btn-main" %>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-warning" %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back, class: "btn btn-secondary"%>
 </div>

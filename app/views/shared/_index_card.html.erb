@@ -1,4 +1,34 @@
 <div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+    <div class="index-card">
+      <div class="overviewInfo card-img-top">
+        <div class="productinfo">
+          <div class="button-new-nft">
+            <%=link_to 'Create your NFT to rent' , new_nft_path, class: "btn btn-main" %>
+          </div>
+        </div>
+      </div>
+      <div class="productSpecifications">
+        <h2 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h2>
+        <h3 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h3>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+        </p>
+        <div class="checkoutButton">
+          <div class="priceTag">
+            <span class="placeholder"></span>
+          </div>
+          <div class="buttonShow">
+            <a href="#" tabindex="-1" class="btn btn-light disabled placeholder col-12"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <% @nfts.each do |nft| %>
     <%# TODO: please move this code to nfts/simple_card partial and reuse it everywhere %>
     <%#= render 'nfts/simple_card', nft: nft %>
@@ -6,42 +36,22 @@
       <div class="index-card">
         <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">
           <div class="productinfo">
-            <div>
-              <div class="grouptext">
-                <h3>NAME</h3>
-                <p><%= nft.name %></p>
-              </div>
-              <div class="grouptext">
-                <h3>Price</h3>
-                <p><%= nft.price %> $</p>
-              </div>
-              <div class="grouptext">
-                <h3>Wallet Address</h3>
-                <p><%= nft.wallet_address %></p>
-              </div>
-            </div>
-            <div class="buttonShow">
-              <%= link_to 'Show', nft_path(nft), class:"btn btn-primary" %>
-            </div>
           </div>
         </div>
-
-          <!-- overview info -->
         <div class="productSpecifications">
           <h2> <%= nft.name %> </h2>
+          <h3>Wallet Address</h3>
+          <p class= "text-wrap"><%= nft.wallet_address %></p>
           <div class="checkoutButton">
             <div class="priceTag">
               <span>$&ensp;</span><%=nft.price %>
             </div>
-            <button class="btn btn-light">
-              Rent
-            </button>
+            <div class="buttonShow">
+              <%= link_to 'Show', nft_path(nft), class:"btn btn-light" %>
+            </div>
           </div>
         </div>
-        <!-- product specificaiton -->
       </div>
-      <!-- wrapper-->
     </div>
-
   <% end %>
 </div>

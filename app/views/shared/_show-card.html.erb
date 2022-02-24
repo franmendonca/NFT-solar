@@ -8,16 +8,16 @@
       <div>
         <div>
           <%= link_to  nfts_path do  %>
-          <i class="fas fa-times btn-close"></i>
+          <i class="fas fa-times"></i>
           <% end %>
         </div>
           <h2><%= @nft.name %></h2>
           <p><strong>About:</strong> <%= @nft.description %></p>
           <p><strong>Wallet address: </strong><%= @nft.wallet_address %></p>
         </div>
-        <div class="price">
-          <p><strong>Price: </strong><%= @nft.price %></p>
-          <button type="button" class="btn btn-primary" data-action="click->toggle-rental-form#toggle">Rent it!</button>
+        <div class="d-flex justify-content-between align-items-center price">
+          <h5 ><strong>Price: </strong><%= @nft.price %> $</h5>
+          <button type="button" class="btn btn-light" data-action="click->toggle-rental-form#toggle">Rent it!</button>
         </div>
     </div>
     </div>

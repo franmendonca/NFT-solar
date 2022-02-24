@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(238, 237, 237, 0.2);
   // margin-bottom: $grid-gutter-width;
 
   .overviewInfo, .productSpecifications {
@@ -18,12 +19,13 @@
   .overviewInfo{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://placehold.it/350x150');
     background-size: cover;
-    // background-image: url("https://cdnb.artstation.com/p/assets/images/images/032/506/745/large/mattis-heisler-spaceship-concept-update-11.jpg?1626364727");
-    // margin-top: 10px;
-
-    flex-grow: 1;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
+    .btn-main{
+      background-color: #15343B;
+      border: 0;
+    }
   }
   .productinfo {
       display: flex;
@@ -31,20 +33,12 @@
       justify-content: space-around;
       min-height: 200px;
   }
-  .grouptext{
+  .productSpecifications{
     h3 {
         letter-spacing: 3.2px;
         font-size: 14px;
         font-weight: 600;
         margin-bottom: 8px;
-        color: #D5E1EF;
-    }
-
-    p {
-      font-size: 12px;
-      opacity: 0.9;
-      color: #D5E1EF;
-      font-weight: 600;
     }
   }
 
@@ -53,6 +47,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    word-break: break-all;
 
     h1{
       margin-top: 10px;
@@ -61,7 +56,7 @@
     }
     p {
       opacity: 0.8;
-      font-size: 15px;
+      font-size: 10px;
       line-height: 1.5;
   }
 
@@ -76,7 +71,7 @@
   .checkoutButton {
       display: flex;
       width: 100%;
-      background-image: var(--bg-shape-color);
+      background:  rgba(16,50,59,1);
       border-radius: 12px;
       overflow: hidden;
       box-shadow: -2px -2px 2px 0px rgba(80, 80, 80, 0.1), 2px 2px 3px 0px rgba(12, 12, 12, 0.3), inset 0px 0px 0px 2px rgba(80, 80, 80, 0.2);
