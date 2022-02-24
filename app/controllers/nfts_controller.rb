@@ -1,7 +1,11 @@
 class NftsController < ApplicationController
   before_action :set_nft, only: [:show]
   def index
-    @nfts = Nft.all
+    if params[:query].present?
+      @nfts = Nft.search_by_name_and_description(params[:query])
+    else
+      @nfts = Nft.all
+    end
   end
 
   def show
