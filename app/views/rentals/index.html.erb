@@ -1,4 +1,16 @@
-<h1>Rentals index</h1>
-<% @rentals.each do |rental| %>
-  <li><%= rental.nft.name %></li>
-<% end %>
+<div class="container">
+  <div class="rentals-nfts d-flex justify-content-around">
+    <div class="rentals_index">
+      <h5>Your Rentals</h5>
+        <% @rentals.each do |rental| %>
+        <%= render "nfts/simple_card", nft: rental.nft %>
+        <% end %>
+    </div>
+    <div class="user-nfts">
+      <h5>Your NFTs</h5>
+      <% @nfts.each do |nft| %>
+      <%= render "nfts/simple_card", nft: nft %>
+      <% end %>
+    </div>
+  </div>
+</div>

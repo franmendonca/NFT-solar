@@ -49,9 +49,10 @@ ActiveRecord::Schema.define(version: 2022_02_24_122814) do
     t.string "description"
     t.string "photo"
     t.integer "price"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_nfts_on_user_id"
   end
 
   create_table "rentals", force: :cascade do |t|
@@ -80,6 +81,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_122814) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "nfts", "users"
   add_foreign_key "rentals", "nfts"
   add_foreign_key "rentals", "users"
 end
