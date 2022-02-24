@@ -1,8 +1,8 @@
 <div class="show-content">
-  <div class="background-show" data-controller="toggle-rental-form">
-    <%= render "shared/show-card" %>
+  <div class="row background-show" data-controller="toggle-rental-form">
+    <%= render "shared/show-card", class: "col-sm-12" %>
 
-    <div class="container d-none" data-toggle-rental-form-target="formContainer">
+    <div class="container d-none create-form" data-toggle-rental-form-target="formContainer">
       <%= simple_form_for([@nft, @rental]) do |f| %>
         <%#= f.error_notification %>
         <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
