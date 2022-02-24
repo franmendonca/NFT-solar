@@ -1,21 +1,19 @@
 <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-      <div class="index-card">
-        <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">
-          <div class="productinfo">
-          </div>
+  <div class="index-card">
+    <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">
+    </div>
+    <div class="productSpecifications">
+      <h2> <%= nft.name %> </h2>
+      <h3>Wallet Address</h3>
+      <p class= "text-wrap"><%= nft.wallet_address %></p>
+      <div class="checkoutButton">
+        <div class="priceTag">
+          <span>$&ensp;</span><%=nft.price %>
         </div>
-        <div class="productSpecifications">
-          <h2> <%= nft.name %> </h2>
-          <h3>Wallet Address</h3>
-          <p class= "text-wrap"><%= nft.wallet_address %></p>
-          <div class="checkoutButton">
-            <div class="priceTag">
-              <span>$&ensp;</span><%=nft.price %>
-            </div>
-            <div class="buttonShow">
-              <%= link_to 'Show', nft_path(nft), class:"btn btn-light" %>
-            </div>
-          </div>
+        <div class="buttonShow">
+          <%= link_to 'Show', nft_path(nft), class:"btn btn-light" %>
         </div>
       </div>
     </div>
+  </div>
+</div>
