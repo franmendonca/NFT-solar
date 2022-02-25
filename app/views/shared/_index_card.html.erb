@@ -39,12 +39,14 @@
           </div>
         </div>
         <div class="productSpecifications">
-          <h2> <%= nft.name %> </h2>
+          <div class="longtext">
+            <h2> <%= nft.name %> </h2>
+          </div>
           <h3>Wallet Address</h3>
           <p class= "text-wrap"><%= nft.wallet_address %></p>
           <div class="checkoutButton">
             <div class="priceTag">
-              <span>$&ensp;</span><%=nft.price %>
+              <span>USDC&ensp;</span><%=nft.price %>
             </div>
             <div class="buttonShow">
               <%= link_to 'Show', nft_path(nft), class:"btn btn-light" %>
