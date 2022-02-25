@@ -2,4 +2,9 @@
   <br>
   <h1>Edit your NFT</h1>
  <%= render "shared/nft_form", nft: @nft %>
+ <%= link_to "Back", rentals_path %>
+ <%= link_to "Delete",
+            rentals_path,
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
 </div>
