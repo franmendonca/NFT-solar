@@ -6,11 +6,13 @@
       <h2> <%= nft.name %> </h2>
       <h3>Wallet Address</h3>
       <p class= "text-wrap"><%= nft.wallet_address %></p>
-      <%# if nil  %>
-        <%# <p>
-          from: 25-02-2022 until 26-02-2022
-        </p> %>
-      <%# end %>
+      <% if is_rental  %>
+        <h3>Rental Dates</h3>
+        <p><%= rental_dates %></p>
+        <%# else %>
+        <%# <br>
+        <br> %>
+      <% end %>
       <div class="checkoutButton">
         <div class="priceTag">
           <span>$&ensp;</span><%=nft.price %>
