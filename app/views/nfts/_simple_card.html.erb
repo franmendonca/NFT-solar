@@ -1,4 +1,4 @@
-<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+<%# <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3"> %>
   <div class="index-card">
     <div class="overviewInfo" style="background-image: url('<%= cl_image_path(nft.photo.key) if nft.photo.key.present? %>')">
     </div>
@@ -6,6 +6,11 @@
       <h2> <%= nft.name %> </h2>
       <h3>Wallet Address</h3>
       <p class= "text-wrap"><%= nft.wallet_address %></p>
+      <%# if nil  %>
+        <%# <p>
+          from: 25-02-2022 until 26-02-2022
+        </p> %>
+      <%# end %>
       <div class="checkoutButton">
         <div class="priceTag">
           <span>$&ensp;</span><%=nft.price %>
@@ -16,4 +21,3 @@
       </div>
     </div>
   </div>
-</div>
