@@ -4,7 +4,7 @@
   <div class="row">
     <%= render "nfts/placeholder_card" %>
     <% @nfts.each do |nft| %>
-    <%= render "nfts/simple_card", nft: nft %>
+    <%= render "nfts/simple_card", nft: nft, some_path: nft_path(nft), link_name: 'Show' %>
     <% end %>
   </div>
   <br>
