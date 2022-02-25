@@ -3,13 +3,13 @@
     <div class="rentals_index">
       <h5>Your Rentals</h5>
         <% @rentals.each do |rental| %>
-        <%= render "nfts/simple_card", nft: rental.nft %>
+        <%= render "nfts/simple_card", nft: rental.nft, link_name: 'Show', some_path: nft_path(rental.nft) %>
         <% end %>
     </div>
     <div class="user-nfts">
       <h5>Your NFTs</h5>
       <% @nfts.each do |nft| %>
-      <%= render "nfts/simple_card", nft: nft %>
+      <%= render "nfts/simple_card", nft: nft, link_name: 'Edit', some_path: edit_nft_path(nft) %>
       <% end %>
     </div>
   </div>
