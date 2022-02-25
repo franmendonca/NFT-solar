@@ -2,9 +2,13 @@
   <br>
   <%= render "shared/search" %>
   <div class="row">
-    <%= render "nfts/placeholder_card" %>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+      <%= render "nfts/placeholder_card" %>
+    </div>
     <% @nfts.each do |nft| %>
-    <%= render "nfts/simple_card", nft: nft, some_path: nft_path(nft), link_name: 'Show' %>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+        <%= render "nfts/simple_card", nft: nft, some_path: nft_path(nft), link_name: 'Show' %>
+      </div>
     <% end %>
   </div>
   <br>
