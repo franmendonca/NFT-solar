@@ -1,21 +1,21 @@
 <%# <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3"> %>
 <div class="row background">
-  <div class="col-lg-6 col-md-8 col-sm-12 col-12 mb-3 your-rentals">
+  <div class="col-md-6 col-sm-12 your-rentals">
     <h5>Your Rentals</h5>
     <div class="row">
       <% @rentals.each do |rental| %>
-        <div class="col-6">
+        <div class="col-xl-6 col-md-12 mb-3 rentals-card">
           <%= render "nfts/simple_card", nft: rental.nft, link_name: 'Show', some_path: nft_path(rental.nft), is_rental: true, rental_dates: "#{rental.start_date} - #{rental.end_date}" %>
         </div>
       <% end %>
     </div>
   </div>
 
-  <div class="col-lg-6 col-md-8 col-sm-12 col-12 mb-3 your-nfts">
+  <div class="col-md-6 col-sm-12 your-nfts">
     <h5>Your NFTs</h5>
     <div class="row">
       <% @nfts.each do |nft| %>
-        <div class="col-6">
+        <div class="col-xl-6 col-md-12 rentals-card mb-3">
           <%= render "nfts/simple_card", nft: nft, link_name: 'Edit', some_path: edit_nft_path(nft), is_rental: false %>
         </div>
       <% end %>
