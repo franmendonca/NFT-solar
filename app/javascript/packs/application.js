@@ -14,3 +14,8 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+import { buttonDisable } from '../components/button_disable';
+
+document.addEventListener('turbolinks:load', () => {
+  buttonDisable();
+});

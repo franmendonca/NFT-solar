@@ -7,12 +7,14 @@
 .rent-form{
   display: flex;
   padding: 50px;
-  justify-content: center;
+  margin: 0 auto;
+  justify-content: right;
   width: 80%
 }
 
 .rent-form{
   .btn{
-  display: grid;
+  display: flex;
   }
+
 }
