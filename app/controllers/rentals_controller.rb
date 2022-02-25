@@ -14,10 +14,26 @@ class RentalsController < ApplicationController
     @rental.nft = @nft
     @rental.user = current_user
 
-    if @rental.save
-      redirect_to rentals_path
+    rented = false
+
+    rentals_for_nft = Rental.where(nft: @nft)
+
+    rentals_for_nft.each do |rental|
+      starting_date = rental.start_date
+      ending_date = rental.end_date
+      if @rental.start_date.between?(starting_date, ending_date) || @rental.end_date.between?(starting_date, ending_date)
+        rented = true
+      end
+    end
+
+    if rented
+      redirect_to nft_path(@rental.nft), alert: "This Nft is already rented by another user, please try another date"
     else
-      render "nfts/show"
+      if @rental.save
+        redirect_to rentals_path
+      else
+        render "nfts/show"
+      end
     end
   end
 
