@@ -4,7 +4,7 @@
  <%= render "shared/nft_form", nft: @nft %>
  <%= link_to "Back", rentals_path %>
  <%= link_to "Delete",
-            rentals_path,
+            nft_path(@nft),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
 </div>

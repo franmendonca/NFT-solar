@@ -37,6 +37,13 @@ class RentalsController < ApplicationController
     end
   end
 
+  def destroy
+    @rental = Rental.find(params[:id])
+    rental.destroy
+
+    redirect_to rentals_path
+  end
+
   private
 
   def rental_params
