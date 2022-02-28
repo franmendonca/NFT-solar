@@ -29,7 +29,7 @@ class NftsController < ApplicationController
   def edit; end
 
   def update
-    @nft = Nft.update(nft_params)
+    @nft.update(nft_params)
 
     redirect_to rentals_path
   end
